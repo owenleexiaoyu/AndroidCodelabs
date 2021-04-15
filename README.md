@@ -12,3 +12,7 @@
 ## CakeKnife
 
 仿写 ButterKnife，实现了@BindView，用来绑定UI控件
+
+## EventCar
+
+仿写 EventBus，基于观察者模式
