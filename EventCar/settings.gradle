@@ -1,0 +1,3 @@
+rootProject.name='EventCar'
+include ':app'
+include ':eventcar'
