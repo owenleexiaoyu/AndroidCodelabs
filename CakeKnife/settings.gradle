@@ -1,0 +1,5 @@
+rootProject.name='CakeKnife'
+include ':app'
+include ':cakeknife'
+include ':processor'
+include ':annotations'
