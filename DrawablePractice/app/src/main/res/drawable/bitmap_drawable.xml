@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/image"
+    android:alpha="1"
+    android:dither="true"
+    android:filter="true"
+    android:antialias="true"
+    android:autoMirrored="true"
+    android:tintMode="src_in"
+    android:gravity="fill"
+    android:tint="#00FF00"
+    />
