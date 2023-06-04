@@ -7,21 +7,32 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/jetpack_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/jetpack_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackPractice"
+        android:name=".app.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lifecycle.LifecycleDemoActivity" android:exported="false"/>
+        <activity android:name=".lifecycle.GetLocationWithoutLifecycleActivity" android:exported="false"/>
+        <activity android:name=".lifecycle.GetLocationWithLifecycleActivity" android:exported="false"/>
+        <activity android:name=".lifecycle.GetLocationWithLifectcleServiceActivity" android:exported="false" />
+        <service android:name=".lifecycle.MyService" />
+
+        <activity android:name=".lifecycle2.Lifecycle2DemoActivity" />
+        <activity android:name=".lifecycle2.AdActivityWithoutLifecycle" />
+        <activity android:name=".lifecycle2.AdActivityWithLifecycle" />
+        <activity android:name=".lifecycle2.AdActivityCustomLifecycleOwner" />
+        <activity android:name=".lifecycle2.AppMainPageActivity" />
     </application>
 
 </manifest>
