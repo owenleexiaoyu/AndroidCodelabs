@@ -18,16 +18,6 @@ class LocationObserver: BaseLocationObserver() {
         Log.d("OWEN", "LocationObserver doOnStart1")
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    fun doOnStart2(owner: LifecycleOwner, event: Lifecycle.Event) {
-        Log.d("OWEN", "LocationObserver doOnStart2")
-    }
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    fun doOnStart3(owner: LifecycleOwner, event: Lifecycle.Event, extra: String) {
-        Log.d("OWEN", "LocationObserver doOnStart2")
-    }
-
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun doOnStop() {
         Log.d("OWEN", "LocationObserver doOnStop")
@@ -46,10 +36,5 @@ class LocationObserver: BaseLocationObserver() {
     @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
     fun doOnAny2(owner: LifecycleOwner, event: Lifecycle.Event) {
         Log.d("OWEN", "LocationObserver doOnAny2")
-    }
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
-    fun doOnAny3(owner: LifecycleOwner, event: Lifecycle.Event, extra: String) {
-        Log.d("OWEN", "LocationObserver doOnAny3")
     }
 }
