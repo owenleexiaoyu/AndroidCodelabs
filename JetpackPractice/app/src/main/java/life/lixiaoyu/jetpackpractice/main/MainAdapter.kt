@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import life.lixiaoyu.jetpackpractice.R
 import life.lixiaoyu.jetpackpractice.lifecycle.LifecycleDemoActivity
 import life.lixiaoyu.jetpackpractice.lifecycle2.Lifecycle2DemoActivity
+import life.lixiaoyu.jetpackpractice.viewmodel1.ViewModelDemoActivity
 
 data class Item(
     val title: String,
@@ -20,6 +21,9 @@ private val dataList: List<Item> = listOf(
     },
     Item("LifeCycle2") {
         it.context.startActivity(Intent(it.context, Lifecycle2DemoActivity::class.java))
+    },
+    Item("ViewModel1") {
+        it.context.startActivity(Intent(it.context, ViewModelDemoActivity::class.java))
     },
     Item("LiveData") {
         it.context.startActivity(Intent(it.context, LifecycleDemoActivity::class.java))

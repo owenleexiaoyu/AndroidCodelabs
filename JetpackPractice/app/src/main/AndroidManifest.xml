@@ -33,6 +33,10 @@
         <activity android:name=".lifecycle2.AdActivityWithLifecycle" />
         <activity android:name=".lifecycle2.AdActivityCustomLifecycleOwner" />
         <activity android:name=".lifecycle2.AppMainPageActivity" />
+
+        <activity android:name=".viewmodel1.ViewModelDemoActivity" />
+        <activity android:name=".viewmodel1.TimerActivityWithoutViewModel" />
+        <activity android:name=".viewmodel1.TimerActivity" />
     </application>
 
 </manifest>
