@@ -11,6 +11,6 @@
 | [CatchThatCat](https://github.com/owenleexiaoyu/AndroidCodelabs/tree/main/CatchThatCat) | 抓住那只猫的益智小游戏。     |
 | **造轮子系列** |  |
 | [DSLUI](https://github.com/owenleexiaoyu/AndroidCodelabs/tree/main/DSLUI) | 用 Kotlin DSL 构建的一个简易的声明式UI框架。               |
-| [RxJavaCore](https://github.com/owenleexiaoyu/AndroidCodelabs/tree/main/RxJavaCore) | UI 仿写：健身 App（含视频播放） |
+| [RxJavaCore](https://github.com/owenleexiaoyu/AndroidCodelabs/tree/main/RxJavaCore) | 一个基于观察者模式的简单的 RxJava 框架 |
 | [CakeKnife](https://github.com/owenleexiaoyu/AndroidCodelabs/tree/main/CakeKnife) | 仿写 ButterKnife，实现了@BindView，用来绑定UI控件 |
 | [EventCar](https://github.com/owenleexiaoyu/AndroidCodelabs/tree/main/EventCar) | 仿写 EventBus，基于观察者模式 | 
