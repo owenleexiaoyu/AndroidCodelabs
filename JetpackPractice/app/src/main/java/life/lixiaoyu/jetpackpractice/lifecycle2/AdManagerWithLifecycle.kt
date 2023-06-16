@@ -9,10 +9,10 @@ import androidx.lifecycle.OnLifecycleEvent
 /**
  * 广告引导页计时器
  */
-class AdManagerWithLifecycle : LifecycleObserver {
+class AdManagerWithLifecycle(val millisInFuture: Long = 5000) : LifecycleObserver {
     var adListener: AdManageListener? = null
 
-    private var countDownTimer: CountDownTimer? = object: CountDownTimer(5000, 1000) {
+    private var countDownTimer: CountDownTimer? = object: CountDownTimer(millisInFuture, 1000) {
 
         override fun onTick(millisUntilFinished: Long) {
             Log.d(TAG, "广告剩余 ${(millisUntilFinished / 1000).toInt()} 秒")

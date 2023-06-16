@@ -37,6 +37,10 @@
         <activity android:name=".viewmodel1.ViewModelDemoActivity" />
         <activity android:name=".viewmodel1.TimerActivityWithoutViewModel" />
         <activity android:name=".viewmodel1.TimerActivity" />
+
+        <activity android:name=".viewmodel2.ViewModelDemo2Activity"/>
+        <activity android:name=".viewmodel2.AdActivityWithoutViewModel" />
+        <activity android:name=".viewmodel2.AdActivityWithViewModel" />
     </application>
 
 </manifest>

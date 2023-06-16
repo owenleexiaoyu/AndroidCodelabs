@@ -10,6 +10,7 @@ import life.lixiaoyu.jetpackpractice.R
 import life.lixiaoyu.jetpackpractice.lifecycle.LifecycleDemoActivity
 import life.lixiaoyu.jetpackpractice.lifecycle2.Lifecycle2DemoActivity
 import life.lixiaoyu.jetpackpractice.viewmodel1.ViewModelDemoActivity
+import life.lixiaoyu.jetpackpractice.viewmodel2.ViewModelDemo2Activity
 
 data class Item(
     val title: String,
@@ -24,6 +25,9 @@ private val dataList: List<Item> = listOf(
     },
     Item("ViewModel1") {
         it.context.startActivity(Intent(it.context, ViewModelDemoActivity::class.java))
+    },
+    Item("ViewModel2") {
+        it.context.startActivity(Intent(it.context, ViewModelDemo2Activity::class.java))
     },
     Item("LiveData") {
         it.context.startActivity(Intent(it.context, LifecycleDemoActivity::class.java))
