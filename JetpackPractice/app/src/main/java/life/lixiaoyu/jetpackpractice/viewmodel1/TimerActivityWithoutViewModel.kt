@@ -17,6 +17,7 @@ class TimerActivityWithoutViewModel: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        currentSecond = savedInstanceState?.getInt(CURRENT_TIME_IN_SECOND) ?: 0
         setContentView(R.layout.activity_viewmodel1_timer)
         tvTimer = findViewById(R.id.tv_timer)
         startTiming()
@@ -24,7 +25,6 @@ class TimerActivityWithoutViewModel: AppCompatActivity() {
 
     private fun startTiming() {
         if (timer == null) {
-            currentSecond = 0
             timer = Timer()
             val timerTask = object : TimerTask() {
                 override fun run() {
@@ -38,8 +38,17 @@ class TimerActivityWithoutViewModel: AppCompatActivity() {
         }
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(CURRENT_TIME_IN_SECOND, currentSecond)
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         timer?.cancel()
+    }
+
+    companion object {
+        const val CURRENT_TIME_IN_SECOND = "current_time_in_second"
     }
 }
