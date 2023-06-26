@@ -5,7 +5,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".chapter12.ui.MaterialDesignActivity">
 
     <include layout="@layout/layout_md_main" android:id="@+id/main_layout"/>
 

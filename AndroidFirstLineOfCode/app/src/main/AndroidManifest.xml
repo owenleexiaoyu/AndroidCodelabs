@@ -24,6 +24,14 @@
         </activity>
         <activity android:name=".chapter1.ASGeneratedActivity" />
         <activity android:name=".chapter3.FirstActivity" />
+        <activity android:name=".chapter3.SecondActivity" />
+        <activity android:name=".chapter3.ThirdActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="life.lixiaoyu.androidfirstlineofcode.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="life.lixiaoyu.androidfirstlineofcode.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".chapter12.ui.MaterialDesignActivity" />
         <activity android:name=".chapter12.ui.FruitDetailActivity" />
