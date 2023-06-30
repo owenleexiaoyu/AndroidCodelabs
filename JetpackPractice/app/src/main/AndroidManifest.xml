@@ -41,6 +41,7 @@
         <activity android:name=".viewmodel2.ViewModelDemo2Activity"/>
         <activity android:name=".viewmodel2.AdActivityWithoutViewModel" />
         <activity android:name=".viewmodel2.AdActivityWithViewModel" />
+        <activity android:name=".viewmodel3.AdActivityWithViewModelSavedState" />
     </application>
 
 </manifest>

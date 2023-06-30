@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import life.lixiaoyu.jetpackpractice.R
+import life.lixiaoyu.jetpackpractice.viewmodel3.AdActivityWithViewModelSavedState
 
 class ViewModelDemo2Activity: AppCompatActivity() {
 
@@ -18,6 +19,9 @@ class ViewModelDemo2Activity: AppCompatActivity() {
         }
         findViewById<Button>(R.id.ad_with_viewmodel).setOnClickListener {
             startActivity(Intent(this, AdActivityWithViewModel::class.java))
+        }
+        findViewById<Button>(R.id.ad_with_viewmodel_saved_state).setOnClickListener {
+            startActivity(Intent(this, AdActivityWithViewModelSavedState::class.java))
         }
     }
 }

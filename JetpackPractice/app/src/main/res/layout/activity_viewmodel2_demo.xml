@@ -20,4 +20,10 @@
         android:layout_height="wrap_content"
         android:text="AdManager with ViewModel" />
 
+    <Button
+        android:id="@+id/ad_with_viewmodel_saved_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AdManager with ViewModel and SavedState" />
+
 </LinearLayout>
