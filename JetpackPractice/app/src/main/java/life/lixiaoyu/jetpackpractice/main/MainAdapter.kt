@@ -10,6 +10,7 @@ import life.lixiaoyu.jetpackpractice.R
 import life.lixiaoyu.jetpackpractice.lifecycle.LifecycleDemoActivity
 import life.lixiaoyu.jetpackpractice.lifecycle2.Lifecycle2DemoActivity
 import life.lixiaoyu.jetpackpractice.livedata1.LiveDataDemo1Activity
+import life.lixiaoyu.jetpackpractice.livedata2.LiveDataDemo2Activity
 import life.lixiaoyu.jetpackpractice.viewmodel1.ViewModelDemoActivity
 import life.lixiaoyu.jetpackpractice.viewmodel2.ViewModelDemo2Activity
 
@@ -32,6 +33,9 @@ private val dataList: List<Item> = listOf(
     },
     Item("LiveData1") {
         it.context.startActivity(Intent(it.context, LiveDataDemo1Activity::class.java))
+    },
+    Item("LiveData2") {
+        it.context.startActivity(Intent(it.context, LiveDataDemo2Activity::class.java))
     }
 )
 

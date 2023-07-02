@@ -46,6 +46,10 @@
         <activity android:name=".livedata1.LiveDataDemo1Activity" />
         <activity android:name=".livedata1.TimerActivityWithViewModelAndLiveData" />
         <activity android:name=".livedata1.SeekBarActivity" />
+
+        <activity android:name=".livedata2.LiveDataDemo2Activity" />
+        <activity android:name=".livedata2.AdActivityWithLiveData" />
+        <activity android:name=".livedata2.student.StudentActivity" />
     </application>
 
 </manifest>
