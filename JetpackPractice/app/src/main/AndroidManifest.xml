@@ -42,6 +42,10 @@
         <activity android:name=".viewmodel2.AdActivityWithoutViewModel" />
         <activity android:name=".viewmodel2.AdActivityWithViewModel" />
         <activity android:name=".viewmodel3.AdActivityWithViewModelSavedState" />
+
+        <activity android:name=".livedata1.LiveDataDemo1Activity" />
+        <activity android:name=".livedata1.TimerActivityWithViewModelAndLiveData" />
+        <activity android:name=".livedata1.SeekBarActivity" />
     </application>
 
 </manifest>
