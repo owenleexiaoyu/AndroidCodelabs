@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFirstLineOfCode"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name=".MainActivity"
@@ -23,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".chapter1.ASGeneratedActivity" />
+
         <activity android:name=".chapter3.FirstActivity" />
         <activity android:name=".chapter3.SecondActivity" />
         <activity android:name=".chapter3.ThirdActivity" android:exported="true">
@@ -32,6 +36,18 @@
                 <category android:name="life.lixiaoyu.androidfirstlineofcode.MY_CATEGORY" />
             </intent-filter>
         </activity>
+        <activity android:name=".chapter3.BrowserActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="https" android:host="www.baidu.com"/>
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chapter3.DialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
 
         <activity android:name=".chapter12.ui.MaterialDesignActivity" />
         <activity android:name=".chapter12.ui.FruitDetailActivity" />

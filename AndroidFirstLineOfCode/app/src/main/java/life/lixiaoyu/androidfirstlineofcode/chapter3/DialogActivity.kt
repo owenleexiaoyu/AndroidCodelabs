@@ -1,28 +1,18 @@
-package life.lixiaoyu.androidfirstlineofcode
+package life.lixiaoyu.androidfirstlineofcode.chapter3
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
+import life.lixiaoyu.androidfirstlineofcode.R
 
-/**
- * Android Studio 在创建项目时，自动生成 MainActivity，改了下名字
- */
-class MainActivity : AppCompatActivity() {
-    private val tag = "MainActivity"
-    private var recyclerview: RecyclerView? = null
+class DialogActivity: AppCompatActivity() {
+
+    private val tag = "DialogActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(tag, "onCreate")
-        setContentView(R.layout.activity_main)
-
-        recyclerview = findViewById(R.id.recyclerview)
-        recyclerview?.let {
-            it.adapter = MainAdapter()
-            it.layoutManager = LinearLayoutManager(this)
-        }
+        setContentView(R.layout.activity_dialog)
     }
 
     override fun onStart() {
