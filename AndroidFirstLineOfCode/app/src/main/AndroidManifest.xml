@@ -49,6 +49,10 @@
             android:name=".chapter3.DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
 
+        <activity android:name=".chapter4.WidgetsActivity" />
+        <activity android:name=".chapter4.TextViewDemoActivity" />
+        <activity android:name=".chapter4.ButtonDemoActivity" />
+
         <activity android:name=".chapter12.ui.MaterialDesignActivity" />
         <activity android:name=".chapter12.ui.FruitDetailActivity" />
     </application>

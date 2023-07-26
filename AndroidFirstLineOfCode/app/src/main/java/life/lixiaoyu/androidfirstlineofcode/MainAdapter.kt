@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import life.lixiaoyu.androidfirstlineofcode.chapter1.ASGeneratedActivity
 import life.lixiaoyu.androidfirstlineofcode.chapter12.ui.MaterialDesignActivity
 import life.lixiaoyu.androidfirstlineofcode.chapter3.FirstActivity
+import life.lixiaoyu.androidfirstlineofcode.chapter4.WidgetsActivity
 
 data class Item(
     val title: String,
@@ -20,6 +21,9 @@ private val dataList: List<Item> = listOf(
     },
     Item("Chapter3: Activity 介绍") {
         it.context.startActivity(Intent(it.context, FirstActivity::class.java))
+    },
+    Item("Chapter4: 基础控件与布局") {
+        it.context.startActivity(Intent(it.context, WidgetsActivity::class.java))
     },
     Item("Chapter12: Material Design 组件") {
         it.context.startActivity(Intent(it.context, MaterialDesignActivity::class.java))
