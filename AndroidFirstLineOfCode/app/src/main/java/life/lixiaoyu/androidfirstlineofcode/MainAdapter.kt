@@ -10,6 +10,7 @@ import life.lixiaoyu.androidfirstlineofcode.chapter1.ASGeneratedActivity
 import life.lixiaoyu.androidfirstlineofcode.chapter12.ui.MaterialDesignActivity
 import life.lixiaoyu.androidfirstlineofcode.chapter3.FirstActivity
 import life.lixiaoyu.androidfirstlineofcode.chapter4.WidgetsActivity
+import life.lixiaoyu.androidfirstlineofcode.network.entity.retrofit.RetrofitDemoActivity
 
 data class Item(
     val title: String,
@@ -27,6 +28,9 @@ private val dataList: List<Item> = listOf(
     },
     Item("Chapter12: Material Design 组件") {
         it.context.startActivity(Intent(it.context, MaterialDesignActivity::class.java))
+    },
+    Item("Retrofit network request") {
+        it.context.startActivity(Intent(it.context, RetrofitDemoActivity::class.java))
     }
 )
 

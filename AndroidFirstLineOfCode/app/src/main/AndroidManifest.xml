@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFirstLineOfCode"
+        android:networkSecurityConfig="@xml/network_security_config"
         tools:targetApi="31"
         android:usesCleartextTraffic="true">
 
@@ -55,6 +56,8 @@
 
         <activity android:name=".chapter12.ui.MaterialDesignActivity" />
         <activity android:name=".chapter12.ui.FruitDetailActivity" />
+
+        <activity android:name=".network.entity.retrofit.RetrofitDemoActivity" />
     </application>
 
 </manifest>
