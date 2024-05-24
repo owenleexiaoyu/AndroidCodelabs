@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#F0F0F0">
+
+        <!--  默认是居上居左的，所以不用写  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="1"
+            android:gravity="center"
+            />
+
+        <!--  添加一个水平方向居中，整体是垂直方向居上，水平方向居中  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="2"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            />
+
+        <!--  添加一个右边和父布局右边对齐，整体是垂直方向居上，水平方向居右  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="3"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            />
+
+        <!--  添加一个垂直方向居中，整体是垂直方向居中，水平方向居左  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="4"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            />
+
+        <!--  添加一个水平垂直方向居中，整体是垂直和水平方向都居中  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="5"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            />
+
+        <!--  添加一个垂直方向居中，右边和父布局右边对齐，整体是垂直方向居中，水平方向居右  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="6"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <!--  添加一个底部和父布局底部对齐，整体是垂直方向居下，水平方向居左  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="7"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            />
+
+        <!--  添加一个底部和父布局底部对齐，水平方向居中，整体是垂直方向居下，水平方向居中  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="8"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <!--  添加一个底部和父布局底部对齐，右边和父布局右边对齐，整体是垂直方向居下，水平方向居右  -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="9"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:background="#F0F0F0">
+
+        <TextView
+            android:id="@+id/anchor"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="锚点控件"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"
+            android:text="在锚点控件上方"
+            android:gravity="center"
+            android:layout_above="@id/anchor"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_orange_light"
+            android:textColor="#FFFFFF"
+            android:text="在锚点控件下方，左边对齐"
+            android:gravity="center"
+            android:layout_below="@id/anchor"
+            android:layout_alignStart="@id/anchor"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"
+            android:text="在锚点控件右边20dp，底部对齐"
+            android:gravity="center"
+            android:layout_toEndOf="@id/anchor"
+            android:layout_marginStart="20dp"
+            android:layout_alignBottom="@id/anchor"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -6,6 +6,15 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import life.lixiaoyu.helloandroid.R
 import life.lixiaoyu.helloandroid.network.entity.Banner
 import life.lixiaoyu.helloandroid.network.entity.WanResponse
@@ -13,6 +22,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.lang.StringBuilder
 
@@ -24,13 +34,51 @@ class RetrofitDemoActivity: AppCompatActivity() {
         setContentView(R.layout.activity_retrofit)
         val tvBannerList = findViewById<TextView>(R.id.banner_list)
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://wanandroid.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+//        val api = RetrofitManager.create(WanAndroidApi::class.java)
+        val api = RetrofitManager.create<WanAndroidApi>()
+        val scope = CoroutineScope(Job() + Dispatchers.Main)
+        scope.launch {
+            try {
+                val response = api.getBannerListSuspend()
+//                val response = withContext(Dispatchers.IO) {
+//                    api.getBannerList().execute()
+//                }
+                if (response.errorCode == 0) {
+                    val bannerList = response.data ?: emptyList()
+                    val stringBuilder = StringBuilder()
+                    for (banner in bannerList) {
+                        stringBuilder.append("${banner.title}\n")
+                        stringBuilder.append("${banner.imagePath}\n\n")
+                    }
+                    tvBannerList.text = stringBuilder.toString().trimEnd('\n')
+                } else {
+                    throw ApiException(response.errorCode, response.errorMsg)
+                }
+            } catch (e: Throwable) {
+                e.printStackTrace()
+            }
+        }
 
-        val api = retrofit.create(WanAndroidApi::class.java)
+//        api.getBannerListObservable()
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe({
+//                if (it.errorCode == 0) {
+//                    val bannerList = it.data ?: emptyList()
+//                    val stringBuilder = StringBuilder()
+//                    for (banner in bannerList) {
+//                        stringBuilder.append("${banner.title}\n")
+//                        stringBuilder.append("${banner.imagePath}\n\n")
+//                    }
+//                    tvBannerList.text = stringBuilder.toString().trimEnd('\n')
+//                } else {
+//                    throw ApiException(it.errorCode, it.errorMsg)
+//                }
+//            }, {
+//                it.printStackTrace()
+//            })
 
+        // Retrofit 原始方式
         api.getBannerList().enqueue(object : Callback<WanResponse<List<Banner>>> {
             override fun onResponse(
                 call: Call<WanResponse<List<Banner>>>,
@@ -50,6 +98,8 @@ class RetrofitDemoActivity: AppCompatActivity() {
             }
 
         })
+
+
         val btnRegister = findViewById<Button>(R.id.btn_register)
         btnRegister.setOnClickListener {
             val request = RegisterRequest("xxxxxxxx", "yyyyyyyy", "yyyyyyyy")

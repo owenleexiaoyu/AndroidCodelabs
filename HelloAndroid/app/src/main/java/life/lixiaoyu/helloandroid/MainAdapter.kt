@@ -10,6 +10,7 @@ import life.lixiaoyu.helloandroid.chapter1.ASGeneratedActivity
 import life.lixiaoyu.helloandroid.chapter12.ui.MaterialDesignActivity
 import life.lixiaoyu.helloandroid.chapter3.FirstActivity
 import life.lixiaoyu.helloandroid.chapter4.WidgetsActivity
+import life.lixiaoyu.helloandroid.coroutines.CoroutinesActivity
 import life.lixiaoyu.helloandroid.network.entity.retrofit.RetrofitDemoActivity
 
 data class Item(
@@ -31,7 +32,10 @@ private val dataList: List<Item> = listOf(
     },
     Item("Retrofit network request") {
         it.context.startActivity(Intent(it.context, RetrofitDemoActivity::class.java))
-    }
+    },
+    Item("Kotlin coroutines") {
+        it.context.startActivity(Intent(it.context, CoroutinesActivity::class.java))
+    },
 )
 
 class MainAdapter: RecyclerView.Adapter<ViewHolder>() {

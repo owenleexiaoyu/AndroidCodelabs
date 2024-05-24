@@ -53,11 +53,19 @@
         <activity android:name=".chapter4.WidgetsActivity" />
         <activity android:name=".chapter4.TextViewDemoActivity" />
         <activity android:name=".chapter4.ButtonDemoActivity" />
+        <activity android:name=".chapter4.EditTextDemoActivity" />
+        <activity android:name=".chapter4.ImageViewDemoActivity" />
+        <activity android:name=".chapter4.ProgressBarDemoActivity" />
+        <activity android:name=".chapter4.AlertDialogDemoActivity" />
+        <activity android:name=".chapter4.FrameLayoutDemoActivity" />
+        <activity android:name=".chapter4.LinearLayoutDemoActivity" />
+        <activity android:name=".chapter4.RelativeLayoutDemoActivity" />
 
         <activity android:name=".chapter12.ui.MaterialDesignActivity" />
         <activity android:name=".chapter12.ui.FruitDetailActivity" />
 
         <activity android:name=".network.entity.retrofit.RetrofitDemoActivity" />
+        <activity android:name=".coroutines.CoroutinesActivity" />
     </application>
 
 </manifest>

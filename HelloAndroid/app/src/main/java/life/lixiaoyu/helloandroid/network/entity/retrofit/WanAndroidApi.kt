@@ -17,7 +17,11 @@ interface WanAndroidApi {
     @GET("/banner/json")
     fun getBannerList(): Call<WanResponse<List<Banner>>>
 
-    fun getBannerListObservable(): Observable<List<Banner>>
+    @GET("/banner/json")
+    fun getBannerListObservable(): Observable<WanResponse<List<Banner>>>
+
+    @GET("/banner/json")
+    suspend fun getBannerListSuspend(): WanResponse<List<Banner>>
 
     @POST("/user/register")
     fun register(@Body request: RegisterRequest): Call<WanResponse<String>>

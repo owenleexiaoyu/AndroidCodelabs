@@ -9,4 +9,6 @@ data class WanResponse<T>(
     val errorMsg: String,
     @SerializedName("data")
     val data: T?
-)
+) {
+    fun isSuccess(): Boolean = errorCode == 0
+}
