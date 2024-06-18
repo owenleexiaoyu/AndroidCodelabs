@@ -1,4 +1,4 @@
-package life.lixiaoyu.helloandroid.network.entity.retrofit
+package life.lixiaoyu.helloandroid.network.retrofit
 
 import android.os.Bundle
 import android.util.Log
@@ -6,24 +6,16 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import life.lixiaoyu.helloandroid.R
 import life.lixiaoyu.helloandroid.network.entity.Banner
 import life.lixiaoyu.helloandroid.network.entity.WanResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
 import java.lang.StringBuilder
 
 class RetrofitDemoActivity: AppCompatActivity() {

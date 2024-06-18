@@ -1,10 +1,8 @@
-package life.lixiaoyu.helloandroid.chapter4
+package life.lixiaoyu.helloandroid.firstcode.c4
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.FrameLayout
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import life.lixiaoyu.helloandroid.R
 

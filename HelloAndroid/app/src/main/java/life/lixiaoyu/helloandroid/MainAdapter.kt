@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import life.lixiaoyu.helloandroid.chapter1.ASGeneratedActivity
+import life.lixiaoyu.helloandroid.firstcode.c1.ASGeneratedActivity
 import life.lixiaoyu.helloandroid.chapter12.ui.MaterialDesignActivity
-import life.lixiaoyu.helloandroid.chapter3.FirstActivity
-import life.lixiaoyu.helloandroid.chapter4.WidgetsActivity
+import life.lixiaoyu.helloandroid.firstcode.c3.FirstActivity
+import life.lixiaoyu.helloandroid.firstcode.c4.WidgetsActivity
 import life.lixiaoyu.helloandroid.coroutines.CoroutinesActivity
-import life.lixiaoyu.helloandroid.network.entity.retrofit.RetrofitDemoActivity
+import life.lixiaoyu.helloandroid.network.retrofit.RetrofitDemoActivity
 
 data class Item(
     val title: String,

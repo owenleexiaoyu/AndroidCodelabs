@@ -1,4 +1,4 @@
-package life.lixiaoyu.helloandroid.network.entity.retrofit
+package life.lixiaoyu.helloandroid.network.retrofit
 
 import com.google.gson.annotations.SerializedName
 import io.reactivex.rxjava3.core.Observable

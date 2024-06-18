@@ -26,18 +26,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".chapter1.ASGeneratedActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c1.ASGeneratedActivity" />
 
-        <activity android:name=".chapter3.FirstActivity" />
-        <activity android:name=".chapter3.SecondActivity" />
-        <activity android:name=".chapter3.ThirdActivity" android:exported="true">
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c3.FirstActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c3.SecondActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c3.ThirdActivity" android:exported="true">
             <intent-filter>
                 <action android:name="life.lixiaoyu.androidfirstlineofcode.ACTION_START" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="life.lixiaoyu.androidfirstlineofcode.MY_CATEGORY" />
             </intent-filter>
         </activity>
-        <activity android:name=".chapter3.BrowserActivity" android:exported="true">
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c3.BrowserActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -47,24 +47,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".chapter3.DialogActivity"
+            android:name="life.lixiaoyu.helloandroid.firstcode.c3.DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
 
-        <activity android:name=".chapter4.WidgetsActivity" />
-        <activity android:name=".chapter4.TextViewDemoActivity" />
-        <activity android:name=".chapter4.ButtonDemoActivity" />
-        <activity android:name=".chapter4.EditTextDemoActivity" />
-        <activity android:name=".chapter4.ImageViewDemoActivity" />
-        <activity android:name=".chapter4.ProgressBarDemoActivity" />
-        <activity android:name=".chapter4.AlertDialogDemoActivity" />
-        <activity android:name=".chapter4.FrameLayoutDemoActivity" />
-        <activity android:name=".chapter4.LinearLayoutDemoActivity" />
-        <activity android:name=".chapter4.RelativeLayoutDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.WidgetsActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.TextViewDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.ButtonDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.EditTextDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.ImageViewDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.ProgressBarDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.AlertDialogDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.FrameLayoutDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.LinearLayoutDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.RelativeLayoutDemoActivity" />
 
         <activity android:name=".chapter12.ui.MaterialDesignActivity" />
         <activity android:name=".chapter12.ui.FruitDetailActivity" />
 
-        <activity android:name=".network.entity.retrofit.RetrofitDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.network.retrofit.RetrofitDemoActivity" />
         <activity android:name=".coroutines.CoroutinesActivity" />
     </application>
 

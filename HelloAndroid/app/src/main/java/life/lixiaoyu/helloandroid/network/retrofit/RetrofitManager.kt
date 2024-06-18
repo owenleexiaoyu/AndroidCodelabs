@@ -1,4 +1,4 @@
-package life.lixiaoyu.helloandroid.network.entity.retrofit
+package life.lixiaoyu.helloandroid.network.retrofit
 
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory

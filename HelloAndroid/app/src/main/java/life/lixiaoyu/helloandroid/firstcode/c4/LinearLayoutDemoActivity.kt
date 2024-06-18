@@ -1,14 +1,14 @@
-package life.lixiaoyu.helloandroid.chapter4
+package life.lixiaoyu.helloandroid.firstcode.c4
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import life.lixiaoyu.helloandroid.R
 
-class TextViewDemoActivity: AppCompatActivity() {
+class LinearLayoutDemoActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_textview_demo)
-
+        setContentView(R.layout.activity_linearlayout_demo)
     }
+
 }

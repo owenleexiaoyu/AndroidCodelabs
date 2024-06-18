@@ -1,4 +1,4 @@
-package life.lixiaoyu.helloandroid.chapter3
+package life.lixiaoyu.helloandroid.firstcode.c3
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
