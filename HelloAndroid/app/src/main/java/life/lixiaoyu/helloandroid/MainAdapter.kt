@@ -11,6 +11,7 @@ import life.lixiaoyu.helloandroid.chapter12.ui.MaterialDesignActivity
 import life.lixiaoyu.helloandroid.firstcode.c3.FirstActivity
 import life.lixiaoyu.helloandroid.firstcode.c4.WidgetsActivity
 import life.lixiaoyu.helloandroid.coroutines.CoroutinesActivity
+import life.lixiaoyu.helloandroid.network.okhttp.OkHttpDemoActivity
 import life.lixiaoyu.helloandroid.network.retrofit.RetrofitDemoActivity
 
 data class Item(
@@ -32,6 +33,9 @@ private val dataList: List<Item> = listOf(
     },
     Item("Retrofit network request") {
         it.context.startActivity(Intent(it.context, RetrofitDemoActivity::class.java))
+    },
+    Item("OkHttp network request") {
+        it.context.startActivity(Intent(it.context, OkHttpDemoActivity::class.java))
     },
     Item("Kotlin coroutines") {
         it.context.startActivity(Intent(it.context, CoroutinesActivity::class.java))
