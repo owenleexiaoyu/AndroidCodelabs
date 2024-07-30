@@ -13,6 +13,7 @@ import life.lixiaoyu.helloandroid.firstcode.c4.WidgetsActivity
 import life.lixiaoyu.helloandroid.coroutines.CoroutinesActivity
 import life.lixiaoyu.helloandroid.network.okhttp.OkHttpDemoActivity
 import life.lixiaoyu.helloandroid.network.retrofit.RetrofitDemoActivity
+import life.lixiaoyu.helloandroid.network.volley.VolleyDemoActivity
 
 data class Item(
     val title: String,
@@ -36,6 +37,9 @@ private val dataList: List<Item> = listOf(
     },
     Item("OkHttp network request") {
         it.context.startActivity(Intent(it.context, OkHttpDemoActivity::class.java))
+    },
+    Item("Volley network request") {
+        it.context.startActivity(Intent(it.context, VolleyDemoActivity::class.java))
     },
     Item("Kotlin coroutines") {
         it.context.startActivity(Intent(it.context, CoroutinesActivity::class.java))

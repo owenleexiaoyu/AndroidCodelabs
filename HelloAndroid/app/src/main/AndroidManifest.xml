@@ -66,6 +66,7 @@
 
         <activity android:name="life.lixiaoyu.helloandroid.network.retrofit.RetrofitDemoActivity" />
         <activity android:name=".network.okhttp.OkHttpDemoActivity" />
+        <activity android:name=".network.volley.VolleyDemoActivity" />
         <activity android:name=".coroutines.CoroutinesActivity" />
     </application>
 
