@@ -14,3 +14,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AndroidMaster"
 include ':app'
+include ':hirestful'
+include ':hirestful-okhttp'
+include ':hirestful-retrofit'
+include ':hirestful-cronet'
+include ':hirestful-volley'
