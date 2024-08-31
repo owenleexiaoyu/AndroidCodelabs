@@ -38,5 +38,8 @@ class WidgetsActivity: AppCompatActivity() {
         findViewById<Button>(R.id.button9).setOnClickListener {
             startActivity(Intent(this, RelativeLayoutDemoActivity::class.java))
         }
+        findViewById<Button>(R.id.button10).setOnClickListener {
+            startActivity(Intent(this, RecyclerViewDemoActivity::class.java))
+        }
     }
 }

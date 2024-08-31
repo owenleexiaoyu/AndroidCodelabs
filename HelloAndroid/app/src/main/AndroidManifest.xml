@@ -60,6 +60,8 @@
         <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.FrameLayoutDemoActivity" />
         <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.LinearLayoutDemoActivity" />
         <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.RelativeLayoutDemoActivity" />
+        <activity android:name="life.lixiaoyu.helloandroid.firstcode.c4.RecyclerViewDemoActivity"
+            android:label="RecyclerViewDemo" />
 
         <activity android:name=".chapter12.ui.MaterialDesignActivity" />
         <activity android:name=".chapter12.ui.FruitDetailActivity" />
