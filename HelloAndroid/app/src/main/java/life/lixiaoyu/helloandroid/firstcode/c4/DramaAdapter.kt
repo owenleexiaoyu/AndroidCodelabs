@@ -18,20 +18,32 @@ class DramaAdapter(dataList: List<Drama>): RecyclerView.Adapter<DramaAdapter.Dra
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DramaViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_drama_vertical, parent, false)
+        val view = when (viewType) {
+            2 -> LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_drama_second, parent, false)
+            else -> LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_drama_vertical, parent, false)
+        }
         val holder = DramaViewHolder(view)
-        holder.itemView.setOnClickListener {
-            Toast.makeText(parent.context, "你点击了第${holder.bindingAdapterPosition}项", Toast.LENGTH_SHORT).show()
-        }
-        holder.cover.setOnClickListener {
-            Toast.makeText(parent.context, "你点击了第${holder.bindingAdapterPosition}项的封面", Toast.LENGTH_SHORT).show()
-        }
+//        holder.itemView.setOnClickListener {
+//            Toast.makeText(parent.context, "你点击了第${holder.bindingAdapterPosition}项", Toast.LENGTH_SHORT).show()
+//        }
+//        holder.cover.setOnClickListener {
+//            Toast.makeText(parent.context, "你点击了第${holder.bindingAdapterPosition}项的封面", Toast.LENGTH_SHORT).show()
+//        }
         return holder
     }
 
     override fun getItemCount(): Int {
         return dataList.size
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return if (position == 2 || position == 4) {
+            2
+        } else {
+            1
+        }
     }
 
     override fun onBindViewHolder(holder: DramaViewHolder, position: Int) {
