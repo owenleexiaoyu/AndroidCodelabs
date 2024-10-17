@@ -23,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".hirestful.HiRestfulDemoActivity" />
+        <activity android:name=".hiexecutor.HiExecutorDemoActivity" />
     </application>
 
 </manifest>

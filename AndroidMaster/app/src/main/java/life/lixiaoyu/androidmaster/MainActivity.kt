@@ -1,47 +1,31 @@
 package life.lixiaoyu.androidmaster
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import life.lixiaoyu.androidmaster.hirestful.Banner
-import life.lixiaoyu.androidmaster.hirestful.BizInterceptor
-import life.lixiaoyu.androidmaster.hirestful.WanAndroidApi
-import life.lixiaoyu.hirestful.HiCallback
-import life.lixiaoyu.hirestful.HiResponse
-import life.lixiaoyu.hirestful.HiRestful
-import life.lixiaoyu.hirestful.okhttp.OkHttpCallFactory
-import life.lixiaoyu.hirestful.retrofit.RetrofitCallFactory
-import life.lixiaoyu.hirestful.volley.VolleyCallFactory
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import life.lixiaoyu.androidmaster.hiexecutor.HiExecutorDemoActivity
+import life.lixiaoyu.androidmaster.hirestful.HiRestfulDemoActivity
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var button1: Button
+    private lateinit var button2: Button
+//    private lateinit var button3: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val baseUrl = "https://www.wanandroid.com"
-        // 使用 Okhttp
-//        val okHttpCallFactory = OkHttpCallFactory()
-//        val hirestful = HiRestful(baseUrl, okHttpCallFactory)
-        // 使用 Retrofit
-//        val retrofitCallFactory = RetrofitCallFactory(baseUrl = baseUrl)
-//        val hirestful = HiRestful(baseUrl, retrofitCallFactory)
-        // 使用 Volley
-        val volleyCallFactory = VolleyCallFactory(this)
-        val hirestful = HiRestful(baseUrl, volleyCallFactory)
-        hirestful.addInterceptor(BizInterceptor())
+        button1 = findViewById(R.id.button1)
+        button2 = findViewById(R.id.button2)
+//        button3 = findViewById(R.id.button3)
 
-        val apiService = hirestful.create(WanAndroidApi::class.java)
-        apiService.getBannerList()
-            .enqueue(object : HiCallback<List<Banner>> {
-                override fun onSuccess(response: HiResponse<List<Banner>>) {
-                    Log.d("GETBANNERLIST", "Success: ${response.data}")
-                }
-
-                override fun onFailed(throwable: Throwable) {
-                    Log.d("GETBANNERLIST", "Error: ${throwable.message}")
-                }
-
-            })
-
+        button1.setOnClickListener {
+            startActivity(Intent(this@MainActivity, HiRestfulDemoActivity::class.java))
+        }
+        button2.setOnClickListener {
+            startActivity(Intent(this@MainActivity, HiExecutorDemoActivity::class.java))
+        }
     }
 }
