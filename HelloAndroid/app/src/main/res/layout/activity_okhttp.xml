@@ -23,5 +23,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/banner_list"
         android:padding="10dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OkHttp 发送 POST 请求，登录 WanAndroid"
+        android:id="@+id/login"
+        />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OkHttp 发送 Multipart 请求，上传图片到 sm.ms"
+        android:id="@+id/upload_image"
+        />
 </LinearLayout>
