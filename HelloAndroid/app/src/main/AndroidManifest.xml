@@ -70,6 +70,7 @@
         <activity android:name=".network.okhttp.OkHttpDemoActivity" />
         <activity android:name=".network.volley.VolleyDemoActivity" />
         <activity android:name=".coroutines.CoroutinesActivity" />
+        <activity android:name=".archsample.TodoListActivity"/>
     </application>
 
 </manifest>

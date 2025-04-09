@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import life.lixiaoyu.helloandroid.archsample.TodoListActivity
 import life.lixiaoyu.helloandroid.firstcode.c1.ASGeneratedActivity
 import life.lixiaoyu.helloandroid.chapter12.ui.MaterialDesignActivity
 import life.lixiaoyu.helloandroid.firstcode.c3.FirstActivity
@@ -43,6 +44,9 @@ private val dataList: List<Item> = listOf(
     },
     Item("Kotlin coroutines") {
         it.context.startActivity(Intent(it.context, CoroutinesActivity::class.java))
+    },
+    Item("Todo List with Mavericks") {
+        it.context.startActivity(Intent(it.context, TodoListActivity::class.java))
     },
 )
 

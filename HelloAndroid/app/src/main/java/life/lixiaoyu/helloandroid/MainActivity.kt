@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.mvrx.Mavericks
 
 /**
  * Android Studio 在创建项目时，自动生成 MainActivity，改了下名字
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(tag, "onCreate")
+        Mavericks.initialize(this)
         setContentView(R.layout.activity_main)
 
         recyclerview = findViewById(R.id.recyclerview)
